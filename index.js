@@ -8,11 +8,7 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // ...
 const sorter = (listNama, cbSort) => {
   let arrBaru = [];
-  if (cbSort == sortAscending) {
-    arrBaru = sortAscending(names);
-  } else {
-    arrBaru = sortDescending(names);
-  }
+  arrBaru = cbSort(listNama);
   let arrHasil = [];
   for (i = 0; i < arrBaru.length; i++) {
     arrHasil.push(i + 1 + ". " + arrBaru[i]);
